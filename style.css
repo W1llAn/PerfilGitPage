@@ -1,0 +1,413 @@
+*{
+    list-style: none;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    border: none;
+    outline: none;
+    scroll-behavior: smooth;
+    font-family: 'Poppins', sans-serif;
+}
+    
+:root{
+    --bg-color: #1f242d;
+    --second-bg-color: #323946;
+    --text-color: #fff;
+    --main-color:#0ef;
+}
+
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+}
+
+.icono_pestaña{
+    border-radius: 70%;
+    overflow: hidden;
+}
+
+body{
+    height: 145vh;
+    position: relative;
+    background-color: #131313;
+}
+
+/*CSS PARA ENCABEZADO----------------------------------------------------------------------------------------------------------------*/
+
+header{
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    z-index: 2;
+    height: 100px;
+}
+
+.logo{
+    height: 70px;
+    width: 100px;
+    border-radius: 20px;
+}
+
+.titulo_encabezado{
+    font-weight: bold;
+    font-size: 40px;
+    color: var(--text-color);
+    margin-left: 10px;
+}
+
+.menu{
+    display: flex;
+    justify-content: center;    
+    align-items: center;
+}
+
+.item{
+    margin: 0 20px;
+    padding: 7px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    color: white;
+}
+
+.item:hover{
+    color:rgb(0, 0, 0);
+    border-radius: 4rem;
+    box-shadow: 0 0 14px var(--text-color);
+    background-color: var(--main-color);
+    transition: background-color 0.4s ;
+    }
+
+#menu{
+    display: none;
+}
+
+.menu_icono{
+    width: 25px;
+}
+
+label{
+    cursor: pointer;
+    display: none;
+}
+
+/*--------------------------------------------------ETIQUETA SOBRE MI--------------------------------------------------------------*/
+
+p{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-align: center;
+    font-size:17px;
+    font-weight: 10px;
+    color: var(--text-color);
+}
+
+.contenedor_info{
+    text-align: center;
+    color: var(--text-color);
+    padding: 5px;
+    width: 100%;
+    height: 100%;
+}
+
+.nombre_etiqueta2{
+    font-size: 35px;
+    color: var(--main-color);
+    font-weight: 3px;
+    margin-bottom: 20px;
+}
+
+.redes_sociales{
+    margin-top: 40px;
+    background-color:var(--main-color);
+    z-index: 1;
+    width: 100%;
+}
+
+.btn_red_facebook{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 3px 15px;
+}
+
+.btn_red_social_intagram{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 3px 15px;
+}
+
+.btn_red_social_github{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    margin: 3px 15px;
+}
+
+.btn_red_facebook:hover{
+    box-shadow: 0 0 30px rgb(0, 16, 135);
+    background-color: rgb(255, 255, 255);
+    border-color: blue;
+    transition: background-color .4s ease;
+}
+ 
+.btn_red_social_github:hover{
+    box-shadow: 0 0 30px rgb(255, 255, 255);
+    background-color: white;
+    border-color: white;
+    transition: background-color .4s ease;
+}
+
+.btn_red_social_intagram:hover{
+    box-shadow: 0 0 30px rgb(254, 148, 0);
+    background-color:white;
+    border-color: orangered;
+    transition: background-color 0.4s ease;
+}
+
+section{
+    min-height:100vh ;
+    padding: 10rem 9% 2rem;
+}
+
+.contenedor1{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.imagen_Etiqueta2{
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+}
+
+/*CSS PARA PROYECTOS REALIZADOS---------------------------------------------------------------------------------------------------*/
+
+.sect_proyectos{
+    background-color: var(--second-bg-color);
+}
+
+.sect_proyectos h1{
+    margin-bottom: 4rem;
+    margin-left: 35%;
+    color: var(--main-color);
+    font-size: 40px;
+    font-weight: 15px;  
+}
+
+.contenedor_proyectos{
+    display: grid;
+    grid-template-columns: repeat(3,1.5fr);
+    align-items: center;
+    gap: 2.5rem;
+}
+
+.contenedor_proyectos .tarj-proyecto{
+    position: relative;
+    border-radius: 2rem;
+    box-shadow: 0 0 1rem var(--bg-color);
+    overflow: hidden;
+    display: flex;
+    height: 400px;
+}
+
+.tarj-proyecto img{
+    width: 100%;
+    height: 400px;
+    transition: 0.5s ease;
+    background: linear-gradient(rgba(0,0,0,.3),var(--bg-color));
+}
+
+.tarj-proyecto:hover img{
+    transform: scale(1.1);
+}
+
+.tarj-proyecto .descripcion-proyecto{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(0,0,0,.4), var(--bg-color));
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 4rem;
+    transform: translateY(100%);
+    transition: 0.5s ease;
+}
+
+.tarj-proyecto:hover .descripcion-proyecto{
+    transform: translateY(0);
+}
+
+.descripcion-proyecto h2{
+    font-size: 3rem;
+    color: var(--text-color);    
+}
+
+.descripcion-proyecto p{
+    font-size: 1.6rem;
+    margin: .3rem 0 1rem;
+    font-weight: 500;
+    color: var(--text-color);
+}
+
+.descripcion-proyecto a{
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background: var(--text-color);
+    border-radius: 50%;
+}
+
+.descripcion-proyecto a i{
+    font-size: 2rem;
+    color: var(--second-bg-color);
+}
+
+/*CSS PARA LENGUAJES Y HERRAMIENTAS-------------------------------------------------------------------------------------------------*/
+.sect_lenguajes{
+    display: grid;
+    width: 100%;    
+    justify-content: center;
+    text-align: center;
+}
+
+.sect_lenguajes h1{
+    color: var(--main-color);
+    font-size: 2.5rem;
+}
+
+.sect_lenguajes h2{
+    color: var(--text-color);
+    font-size: 2rem;
+}
+
+.sect_lenguajes .contenedor_img{
+    display: inline-flex;
+}
+
+.contenedor_img .img_lyh{
+    width: 15rem;
+    height: 15rem;
+    margin: 0 60px;
+
+}
+
+.contenedor_img .img_lyh:hover{
+    transform: scale(1.2);
+    transition: 0.5s transform;
+}
+
+/*CSS PARA SECCION DEL FORMULARIO----------------------------------------------------------------------------------------------------*/
+
+.btn_enviar{
+    margin-top: 2rem;
+    border-radius: 4rem;
+    background-color: var(--main-color);
+    color: var(--bg-color);
+    text-align: center;
+    font-size: 2rem;
+    padding: 10px 35px;
+    font-weight: bold;
+}
+.btn_enviar:hover{
+    box-shadow: 0 0 1rem var(--text-color);
+    transform: scale(1.1);
+    transition: 0.4s ease;
+   /* color: var(--text-color);*/
+}
+
+.sect_contacto{
+    margin-bottom: 3rem;
+    background-color: var(--second-bg-color);
+}
+
+.sect_contacto h1{
+    color: var(--main-color);
+    font-size: 3rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.sect_contacto form{
+    max-width: 70rem;
+    margin: 1rem auto;
+    text-align: center;
+    margin-bottom:3rem;
+}
+
+.sect_contacto form .caja_texto{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.sect_contacto form textarea,
+.sect_contacto form .caja_texto input{
+    width: 100%;
+    padding: 1.5rem;
+    font-size: 1.6rem;
+    color: var(--text-color);
+    background-color: var(--second-bg-color);
+    border-radius: 10px;
+    margin: 0.7rem 0;
+}
+
+.sect_contacto form .caja_texto input{
+    width: 49%;
+}
+
+.sect_contacto form textarea{
+ resize: none;
+}
+.pie_pagina{
+    width: 100%;
+    background-color: var(--second-bg-color);
+    height: 9.5rem;
+}
+
+
+
+@media(max-width:991px){
+    .menu{
+        padding: 30px;
+        margin: 0;
+    }
+
+    label{
+        display: initial;
+    }
+
+    .menu{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: #323637;
+        display: none;
+    }
+
+    .item{
+
+        margin: 0 0 20px 0;
+        width: 100%;
+    }
+
+    #menu:checked ~ .menu{
+        display: initial;
+
+    }
+}
